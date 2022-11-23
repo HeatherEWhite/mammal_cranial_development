@@ -1,0 +1,23 @@
+Species,Specimen_number,Subclass,Major_clades,Genus,Precocial_altricial_spectrum,Diet,CS,Diet_3
+B. penicillata,SAM-24247,Metatheria,Marsupialia,Bettongia,Super altricial,Fungivore,278.7160939,Herbivore
+B. tridactylus,NHMUK_1867.4.12.579,Eutheria,Xenarthra,Bradypus,Semi-precocial,Herbivore,311.0235809,Herbivore
+S. apella,NHMUK_12.6.5.8,Eutheria,Euarchontoglires,Cebus,Semi-altricial,Frugivore,393.3895807,Herbivore
+C. didactylus,NHMUK_26.12.4.68,Eutheria,Xenarthra,Cyclopes,Semi-precocial,Insectivore,210.8303944,Faunivore
+D. leporina,NHMUK_52.1156,Eutheria,Euarchontoglires,Dasyprocta,Precocial,Herbivore,390.9610401,Herbivore
+D. novemcinctus,z.134,Eutheria,Xenarthra,Dasypus,Precocial,Insectivore,362.7961659,Faunivore
+E. franqueti,NHMUK_66.3499,Eutheria,Laurasiatheria,Epomops,Altricial,Frugivore,201.8727754,Herbivore
+F. catus,NHMUK_1952.10.20.1,Eutheria,Laurasiatheria,Felis,Semi-altricial,Carnivore,386.3616027,Faunivore
+M. proboscideus,NHMUK_3.1.4.10,Eutheria,Afrotheria,Macroscelides,Precocial,Insectivore,126.5728707,Faunivore
+P. tricuspis,NHMUK_1.8.9.108,Eutheria,Laurasiatheria,Manis,Semi-precocial,Insectivore,240.8285552,Faunivore
+M. murinus,DLC_7030f,Eutheria,Euarchontoglires,Microcebus,Semi-altricial,Frugivore,140.6334422,Herbivore
+M. domestica,TMM-M-9038,Metatheria,Marsupialia,Monodelphis,Super altricial,Omnivore,163.5472176,Omnivore
+M. musculus,cfos_WT_1485,Eutheria,Euarchontoglires,Mus,Altricial,Omnivore,87.58273638,Omnivore
+O. anatinus,NHMUK_90.12.4.5,Prototheria,Monotremata,Ornithorhynchus,Super altricial,Carnivore,327.6564754,Faunivore
+P. aethiopicus,NHMUK_66.425,Eutheria,Laurasiatheria,Phacochoerus,Precocial,Herbivore,1465.473463,Herbivore
+P. cinereus,PcinLge02,Metatheria,Marsupialia,Phascolarctos,Super altricial,Herbivore,495.916987,Herbivore
+R. rattus,NHMUK_1999.14,Eutheria,Euarchontoglires,Rattus,Altricial,Omnivore,135.0555611,Omnivore
+S. setosus,NHMUK_1974.484,Eutheria,Afrotheria,Setifer,Altricial,Omnivore,171.6190953,Omnivore
+S. brachyurus,NHMUK_6.8.1.245,Metatheria,Marsupialia,Setonix,Super altricial,Herbivore,325.4150858,Herbivore
+S. macroura,SmacAdult33_08,Metatheria,Marsupialia,Sminthopsis,Super altricial,Insectivore,98.88679572,Faunivore
+T. europaea,NHMUK_1989.565,Eutheria,Laurasiatheria,Talpa,Altricial,Insectivore,128.5538811,Faunivore
+T. vulpecula,TV1,Metatheria,Marsupialia,Trichosaurus,Super altricial,Herbivore,181.0267665,Herbivore

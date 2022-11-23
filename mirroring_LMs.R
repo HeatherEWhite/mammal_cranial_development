@@ -27,7 +27,7 @@ library(rgl)
 # STEP 1: Load the data
 
 # Locate the folder containing the cranial landmarks
-folder <- 'Raw_Data/LMs'
+folder <- 'Data/LMs'
 
 
 # Read in the cranial landmark data into an array
@@ -36,7 +36,7 @@ nspecimens<-165 # number of specimens within the dataset
 ptslist<-dir(path = folder, pattern='*.pts',recursive=T)
 
 # Set the working directory to the LM folder - not the overall R project
-setwd("/Users/heatherwhite/Documents/PhD/PhD/R_Projects/mammal_cranial_development/Raw_Data/LMs")
+setwd("/Users/heatherwhite/Documents/PhD/PhD/R_Projects/mammal_cranial_development/Data/LMs")
 
 # Create and fill an array containing the .pts landmarks
 ptsarray<-array(dim=c(69,3,165)) # dim=c(number of landmarks on the LHS (to mirror), number of dimensions, number of specimens)
@@ -482,7 +482,7 @@ comb.dataset <- reflect.lmks(X = X, v = v, midline = midline, plot.res = F) # Ma
 
 # Visualise the results on a specimen
 # The below line has to be for the ASCII .ply file
-scan2=ply2mesh(file="Raw_Data/plys_ascii/HW_Manis_tricuspis_91.363_skull_decimated.ply") 
+scan2=ply2mesh(file="Data/plys_ascii/HW_Manis_tricuspis_91.363_skull_decimated.ply") 
 # Check which number this spec is using the ptslist variable - have to input this number below, here as 65
 
 # Highlight all four lines and run togethers to plot LMs on the skull
