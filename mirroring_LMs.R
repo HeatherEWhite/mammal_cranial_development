@@ -476,7 +476,7 @@ midline <- c(41,42,43,51,52)
 
 # Implement the reflect.lmks function
 comb.dataset <- reflect.lmks(X = X, v = v, midline = midline, plot.res = F) # Mark as T/F if do/don't want all the visual windows to open
-
+save(comb.dataset, file = "Data/Mirrored_LMs.Rdata")
 
 #### Check the results
 
@@ -513,6 +513,8 @@ procdist <- as.matrix(ProcD)
 
 # Save the centroid size data
 write.csv(CS, file = "Data/Centroid_size.csv")
+# Save the mirrored and Procrusted LMs (LHS and RHS)
+save(coords_data_mirrored, file = "Data/mirrored_Procrusted_LMs.Rdata")
 
 
 # Checking if landmark ordering is correct
