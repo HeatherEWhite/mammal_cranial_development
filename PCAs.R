@@ -149,6 +149,7 @@ PCAresults_all<-PCAresults_all %>% mutate(Subclass = specimen_details$Subclass,
                                           Specimen = specimen_details$Specimen_name,
                                           CS_logged = specimen_details$CS_logged,
                                           CS_percent_adult = specimen_details$CS_percent_adult) 
+save(PCAresults_all, file = "Data/PCAresults_all.Rdata")
 
 
 # Multiply PC1 by -1 to flip the PC1 axis
