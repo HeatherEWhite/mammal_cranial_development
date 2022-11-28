@@ -160,6 +160,9 @@ PCAresults_all <- select(PCAresults_all, 2:172)
 PCAresults_all <- cbind(PCAresults_PC1, PCAresults_all)
 names(PCAresults_all)[names(PCAresults_all) == 'PCAresults_PC1'] <- 'Comp1'
 
+# Save PC scores with specimen info as an R object
+save(PC_scores_PC1_flipped, file = "Data/PC_scores_all_specimens.Rdata")
+
 # Can view PC1 shapes again after this manipulation
 
 
