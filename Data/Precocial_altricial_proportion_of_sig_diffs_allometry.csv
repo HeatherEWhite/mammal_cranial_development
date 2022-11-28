@@ -1,0 +1,23 @@
+﻿Species,Proportion_of_sig_diffs_from_allometry,Precocial_altricial_spectrum,Group
+Monodelphis domestica,17,Super altricial,Group_1
+Sminthopsis macroura,13,Super altricial,Group_1
+Trichosaurus vulpecula,10,Super altricial,Group_1
+Bettongia penicillata,9,Super altricial,Group_1
+Ornithorhynchus anatinus,9,Super altricial,Group_1
+Setonix brachyurus,6,Super altricial,Group_1
+Phascolarctos cincereus,1,Super altricial,Group_1
+Mus musculus,7,Altricial,Group_2
+Rattus rattus,6,Altricial,Group_2
+Talpa europaea,6,Altricial,Group_2
+Epomops franqueti,5,Altricial,Group_2
+Setifer setosus,4,Altricial,Group_2
+Felis catus,3,Semi-altricial,Group_3
+Microcebus murinus,3,Semi-altricial,Group_3
+Cebus apella,3,Semi-altricial,Group_3
+Bradypus tridactylus ,2,Semi-precocial,Group_4
+Cyclopes didactylus,3,Semi-precocial,Group_4
+Manis tricuspis,6,Semi-precocial,Group_4
+Macroscelides proboscideus,5,Precocial,Group_5
+Dasyprocta leporina,7,Precocial,Group_5
+Dasypus novemcinctus,10,Precocial,Group_5
+Phacocheorus aetheopicus,19,Precocial,Group_5
