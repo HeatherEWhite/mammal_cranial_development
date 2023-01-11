@@ -27,7 +27,7 @@ In this folder you will find data stored in the `Data` folder used for running t
 
 All .csv documents have single tabs 
 
-The data are provided in the `Data` folder
+The data used here are provided in the `Data` folder
 1. `LMs` folder contains the raw .pts files for all 165 specimens used within this analysis
 2. `plys_ascii` folder contains surface meshes for two scans used to visualise landmark placement. All other surface meshes are available on MorphoSource.
 3. `Centroid_size` - centroid size as calculated from Procrusted landmarks for each specimen (.csv)
@@ -37,18 +37,18 @@ The data are provided in the `Data` folder
 7. `Mirrored_LMs` - array containing all LHS mirrored to RHS landmarks, prior to Procrustes superimposition (.Rdata)
 8. `PCAresults_all` - results of PCA for all specimens, including PC axis variation (.Rdata)
 9. `PC_scores_all_specimens` - Principal component scores for each PC for each specimen (.Rdata)
-10.`Precocial_altricial_proportion_of_sig_diffs_allometry` - species' altriciality and proportion of allometric trajectory significant differences (.csv)
-11.`Specimen_info` - full dataset specimen details, including: continuous and discrete age, altriciality, species, centroid size (.csv)
-12.`Specimen_info_adults` - details for the adult only specimens (n=22) as above (.csv)
-13.`Specimen_names` - a list containing all 165 specimen names (.csv)
-14.`Upham_NDexp_MCC` - mammal phylogeny as published in Upham et al. (2019) (.tre.txt)
-15.`absent_LMs` - variably present bones for specimens across the dataset, listed as the first landmark defining the cranial bone (.csv)
-16.`adult_Procrusted_LMs` - array containing landmarks subjected to Procrustes superimposition for adult specimens only (n=22) (.Rdata)
-17.`mirrored_Procrusted_LMs` - array containing mirrored landmarks (LHS and RHS) subjected to Procrustes superimposition (.Rdata)
-18.`my_mammal_tree` - phylogeny containing all 22 species within the dataset, trimmed from Upham et al. (2019) (.nexus)
-19.`my_mammal_tree_placentals` - phylogeny containing all placental mammal species within the dataset (n=15), trimmed from Upham et al. (2019) (.nexus)
-20.`tree_taxa_names` - taxa names matching those within the phylogeny for the full dataset (.csv)
-21.`tree_taxa_names_placentals` - taxa names matching those within the placental mammal phylogeny (.csv)
+10. `Precocial_altricial_proportion_of_sig_diffs_allometry` - species' altriciality and proportion of allometric trajectory significant differences (.csv)
+11. `Specimen_info` - full dataset specimen details, including: continuous and discrete age, altriciality, species, centroid size (.csv)
+12. `Specimen_info_adults` - details for the adult only specimens (n=22) as above (.csv)
+13. `Specimen_names` - a list containing all 165 specimen names (.csv)
+14. `Upham_NDexp_MCC` - mammal phylogeny as published in Upham et al. (2019) (.tre.txt)
+15. `absent_LMs` - variably present bones for specimens across the dataset, listed as the first landmark defining the cranial bone (.csv)
+16. `adult_Procrusted_LMs` - array containing landmarks subjected to Procrustes superimposition for adult specimens only (n=22) (.Rdata)
+17. `mirrored_Procrusted_LMs` - array containing mirrored landmarks (LHS and RHS) subjected to Procrustes superimposition (.Rdata)
+18. `my_mammal_tree` - phylogeny containing all 22 species within the dataset, trimmed from Upham et al. (2019) (.nexus)
+19. `my_mammal_tree_placentals` - phylogeny containing all placental mammal species within the dataset (n=15), trimmed from Upham et al. (2019) (.nexus)
+20. `tree_taxa_names` - taxa names matching those within the phylogeny for the full dataset (.csv)
+21. `tree_taxa_names_placentals` - taxa names matching those within the placental mammal phylogeny (.csv)
 
 ## Analysis
 In this repository you will find raw data (.csv, .Rdata, .nexus) and scripts for analyses (scripts supplied as .R files)
