@@ -115,11 +115,22 @@ gdf_adults <- geomorph.data.frame(adults, phy = my_tree, Species = adult_specime
 # Name the geomorph dataframe 
 names(gdf_adults) <-c("Phy","Proc_coords","Species", "Dev_strategy", "CS")
 
+# Perform allometry and access residuals
+fit2 <- procD.lm(gdf_adults$Proc_coords~log(gdf_adults$CS))
+residuals2 <- fit2$residuals
+
+# Add the phylogeny to the geomorph dataframe
+gdf_adults <- geomorph.data.frame(adults, phy = my_tree, Species = adult_specimen_details$Species,
+                                  Dev_strategy = adult_specimen_details$Precocial_altricial_spectrum,
+                                  CS = adult_specimen_details$CS, residuals = residuals2)
+# Name the geomorph dataframe 
+names(gdf_adults) <-c("Phy","Proc_coords","Species", "Dev_strategy", "CS", "Residuals")
+
 
 # Perform pMANOVA
 
 # Phylogenetic MANOVA for developmental strategy
-devPMVA <- procD.pgls(Proc_coords ~ Dev_strategy, phy = Phy, data = gdf_adults, iter = 999)                          
+devPMVA <- procD.pgls(Residuals ~ Dev_strategy, phy = Phy, data = gdf_adults, iter = 999)                          
 summary(devPMVA)
 
 
@@ -132,19 +143,35 @@ placentals <- filter(info, Subclass == "Eutheria")
 # Select the placental only LMs
 plac_no <- placentals[,1]
 placental_LMs <- absent_Proc[,,plac_no]
+plac_CS <- CS[plac_no]
 
 # Get the raw Procrustes data into a geomorph dataframe
 gdf_plac <- geomorph.data.frame(placental_LMs, Age = placentals$Age, 
                                 Species = placentals$Species, 
                                 Dev_strat = placentals$Dev_strategy, 
-                                Infraclass = placentals$Subclass)
+                                Infraclass = placentals$Subclass,
+                                CS = plac_CS)
 # name first part of data frame (containing Procrustes data)
-names(gdf_plac) <-c("Proc_coords","Age","Species", "Development_strategy", "Infraclass")
+names(gdf_plac) <-c("Proc_coords","Age","Species", "Development_strategy", "Infraclass", "CS")
+
+# Perform allometry and access residuals
+fit3 <- procD.lm(gdf_plac$Proc_coords~log(gdf_plac$CS))
+residuals3 <- fit3$residuals
+
+# Get the raw Procrustes data into a geomorph dataframe
+gdf_plac <- geomorph.data.frame(placental_LMs, Age = placentals$Age, 
+                                Species = placentals$Species, 
+                                Dev_strat = placentals$Dev_strategy, 
+                                Infraclass = placentals$Subclass,
+                                CS = plac_CS, residuals = residuals3)
+# name first part of data frame (containing Procrustes data)
+names(gdf_plac) <-c("Proc_coords","Age","Species", "Development_strategy", "Infraclass", "CS","Residuals")
+
 
 ###
 
 # Perform the MANOVA for differences in skull shape based on developmental strategy
-devMVA_plac <-procD.lm(Proc_coords ~ Development_strategy, f2 = NULL, f3 = NULL, data = gdf_plac, 
+devMVA_plac <-procD.lm(Residuals ~ Development_strategy, f2 = NULL, f3 = NULL, data = gdf_plac, 
                   iter = 999, print.progress = FALSE)
 summary(devMVA_plac)
 
@@ -159,6 +186,8 @@ my_tree_placentals <- read.nexus("Data/my_mammal_tree_placentals.nexus")
 adult_placental_LMs <- adults[,,-c(1,12,14,16,19,20,22)]
 # Select the placental specimen details
 adult_info_plac <- filter(adult_specimen_details, Subclass == "Eutheria")
+# Select the placental only CS
+plac_adult_CS <- adult_info_plac$CS
 # Read in the specimen names to match the tree
 tree_names <- read.csv("Data/tree_taxa_names_placentals.csv")
 tree_names <- tree_names$Taxa_names
@@ -175,13 +204,26 @@ dimnames(adult_placental_LMs)[[3]] <- tree_names
 # Create geomorph dataframe for placental adults
 gdf_plac_adults <- geomorph.data.frame(adult_placental_LMs, phy = my_tree_placentals, 
                            Species = adult_info_plac$Species,
-                           Dev_strategy = adult_info_plac$Precocial_altricial_spectrum)
+                           Dev_strategy = adult_info_plac$Precocial_altricial_spectrum,
+                           CS = plac_adult_CS)
 # Name the geomorph dataframe 
-names(gdf_plac_adults) <-c("Phy","Proc_coords","Species", "Dev_strategy")
+names(gdf_plac_adults) <-c("Phy","Proc_coords","Species", "Dev_strategy", "CS")
+
+# Perform allometry and access residuals
+fit4 <- procD.lm(gdf_plac_adults$Proc_coords~log(gdf_plac_adults$CS))
+residuals4 <- fit4$residuals
+
+# Create geomorph dataframe for placental adults
+gdf_plac_adults <- geomorph.data.frame(adult_placental_LMs, phy = my_tree_placentals, 
+                                       Species = adult_info_plac$Species,
+                                       Dev_strategy = adult_info_plac$Precocial_altricial_spectrum,
+                                       CS = plac_adult_CS, residuals = residuals4)
+# Name the geomorph dataframe 
+names(gdf_plac_adults) <-c("Phy","Proc_coords","Species", "Dev_strategy", "CS", "Residuals")
 
 
 # Perform pMANOVA for developmental strategy and skull shape
-devPMVA_plac <- procD.pgls(Proc_coords ~ Dev_strategy, phy = Phy, data = gdf_plac_adults, iter = 999)                          
+devPMVA_plac <- procD.pgls(Residuals ~ Dev_strategy, phy = Phy, data = gdf_plac_adults, iter = 999)                          
 summary(devPMVA_plac)
 
 
