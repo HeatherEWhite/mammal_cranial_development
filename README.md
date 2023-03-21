@@ -63,7 +63,7 @@ All data is outlined above in the 'Data' section. The `Data` folder includes .cs
 
 `MANOVAs.R`
 
-`PCA_3D.R`
+`PCA_3D.R` This script contains the relevant code to produce the 3D PCA which is captured in Figure 4 and can be visualised in 3D here.
 
 `PCAs.R`
 
