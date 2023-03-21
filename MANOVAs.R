@@ -72,7 +72,7 @@ par(mfrow = c(1,1))
 
 ######
 
-# MANOVA for differences in skull shape based on developmental strategy
+# MANOVA for differences in allometry corrected skull shape based on developmental strategy
 devMVA <-procD.lm(Residuals ~ Development_strategy, f2 = NULL, f3 = NULL, data = gdf, 
                   iter = 999, print.progress = FALSE)
 summary(devMVA)
@@ -110,8 +110,8 @@ dimnames(adults)[[3]] <- tree_names
 
 # Add the phylogeny to the geomorph dataframe
 gdf_adults <- geomorph.data.frame(adults, phy = my_tree, Species = adult_specimen_details$Species,
-                           Dev_strategy = adult_specimen_details$Precocial_altricial_spectrum,
-                           CS = adult_specimen_details$CS)
+                                  Dev_strategy = adult_specimen_details$Precocial_altricial_spectrum,
+                                  CS = adult_specimen_details$CS)
 # Name the geomorph dataframe 
 names(gdf_adults) <-c("Phy","Proc_coords","Species", "Dev_strategy", "CS")
 
@@ -129,7 +129,7 @@ names(gdf_adults) <-c("Phy","Proc_coords","Species", "Dev_strategy", "CS", "Resi
 
 # Perform pMANOVA
 
-# Phylogenetic MANOVA for developmental strategy
+# Phylogenetic MANOVA for developmental strategy vs allometry corrected shape
 devPMVA <- procD.pgls(Residuals ~ Dev_strategy, phy = Phy, data = gdf_adults, iter = 999)                          
 summary(devPMVA)
 
@@ -170,9 +170,9 @@ names(gdf_plac) <-c("Proc_coords","Age","Species", "Development_strategy", "Infr
 
 ###
 
-# Perform the MANOVA for differences in skull shape based on developmental strategy
+# Perform the MANOVA for differences in allometry corrected skull shape based on developmental strategy
 devMVA_plac <-procD.lm(Residuals ~ Development_strategy, f2 = NULL, f3 = NULL, data = gdf_plac, 
-                  iter = 999, print.progress = FALSE)
+                       iter = 999, print.progress = FALSE)
 summary(devMVA_plac)
 
 ###
@@ -203,9 +203,9 @@ dimnames(adult_placental_LMs)[[3]] <- tree_names
 
 # Create geomorph dataframe for placental adults
 gdf_plac_adults <- geomorph.data.frame(adult_placental_LMs, phy = my_tree_placentals, 
-                           Species = adult_info_plac$Species,
-                           Dev_strategy = adult_info_plac$Precocial_altricial_spectrum,
-                           CS = plac_adult_CS)
+                                       Species = adult_info_plac$Species,
+                                       Dev_strategy = adult_info_plac$Precocial_altricial_spectrum,
+                                       CS = plac_adult_CS)
 # Name the geomorph dataframe 
 names(gdf_plac_adults) <-c("Phy","Proc_coords","Species", "Dev_strategy", "CS")
 
@@ -222,7 +222,7 @@ gdf_plac_adults <- geomorph.data.frame(adult_placental_LMs, phy = my_tree_placen
 names(gdf_plac_adults) <-c("Phy","Proc_coords","Species", "Dev_strategy", "CS", "Residuals")
 
 
-# Perform pMANOVA for developmental strategy and skull shape
+# Perform pMANOVA for developmental strategy and allometry corrected skull shape
 devPMVA_plac <- procD.pgls(Residuals ~ Dev_strategy, phy = Phy, data = gdf_plac_adults, iter = 999)                          
 summary(devPMVA_plac)
 
