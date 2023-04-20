@@ -14,11 +14,10 @@ If using any of this code or data please cite the paper above and this repo
 
 __To cite this repo__: 
 
-> White HW, Tucker AS, Fernandez V, Portela Miguez R, Hautier L, Herrel A, Urban DJ, Sears KE, Goswami A. Paedomorphosis at the origin of marsupial mammals. Current Biology. 2023. Github: https://github.com/HeatherEWhite/mammal_cranial_development plus the Zenodo DOI: https://doi.org/10.5281/zenodo.4037220
+> White HW, Goswami A. Paedomorphosis at the origin of marsupial mammals. Current Biology. 2023. Github: https://github.com/HeatherEWhite/mammal_cranial_development plus the Zenodo DOI: https://doi.org/10.5281/zenodo.4037220
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4037220.svg)](https://doi.org/10.5281/zenodo.4037220)
+[![DOI](https://zenodo.org/badge/latestdoi/567706360)](https://zenodo.org/badge/latestdoi/567706360)
 
-UPDATE ZENODO DOI'S ABOVE
 
 
 ## Data
