@@ -16,7 +16,7 @@ __To cite this repo__:
 
 > White HW, Goswami A. Paedomorphosis at the origin of marsupial mammals. Current Biology. 2023. Github: https://github.com/HeatherEWhite/mammal_cranial_development plus the Zenodo DOI: https://zenodo.org/badge/latestdoi/567706360
 
-[![DOI](https://zenodo.org/badge/latestdoi/567706360.svg)](https://zenodo.org/badge/latestdoi/567706360)
+[![DOI](https://zenodo.org/badge/DOI/567706360.svg)](https://zenodo.org/badge/latestdoi/567706360)
 
 
 
